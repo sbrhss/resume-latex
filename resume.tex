@@ -1,0 +1,166 @@
+%-------------------------
+% Resume in Latex
+% Author : SaberHosseini
+% Website: https://github.com/sbrhss/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/saber-hosseini-705bba12b/}{\Large Saber Hosseini}} & Email : \href{mailto:mir.saber.mogaddam@gmail.com}{mir.saber.mogaddam@gmail.com}\\
+  \href{https://github.com/sbrhss}{https://github.com/sbrhss} & Mobile : 070-45-40-200 \\
+\end{tabular*}
+
+
+%-----------Description-----------------
+\section{Description}
+  \resumeSubHeadingListStart
+   \resumeSubItem{Currently}
+   {As an Embedded Operating System (OS) and Software Developer at TagMaster, I develop and maintain embedded Linux systems for long-range RFID readers 
+   and ANPR (Automatic Number Plate Recognition) cameras. My responsibilities include building custom Linux distributions using Yocto and Buildroot, 
+   developing and debugging Linux device drivers, upgrading OS components, and adding new features for both Linux and RTOS-based platforms. 
+   I also work with hardware-related features such as AI accelerators, hardware image encoders/decoders, and GPU integration to support real-time image processing 
+   and computer vision applications. My role includes system bring-up, peripheral integration, performance tuning, and ensuring reliable operation across embedded products. 
+   I am especially interested in SoCs, MPSoCs, hardware accelerators, DSPs, machine learning, and FPGAs.
+   }
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+\resumeItemListStart
+     \resumeItem{Languages}{C, C++ (11), Verliog/VHDL, Bash, ARM Assembly (32/64bit), Python, CUDA}
+     \resumeItem{Embedded Platforms \& OS}{Linux, device driver, device tree, Nuttx, FreeRTOS}
+     \resumeItem{Build \& Tools}{Yocto, Buildroot, CMake, Make, Git, SVN, Vivado ISE/HLS}
+     \resumeItem{Debugging \& Profiling}{GDB, KGDB, Valgrind, starce, perf}
+\resumeItemListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {TagMaster}{Stockholm}
+      {Embedded Software Engineer}{Sep 2023 - Present}
+      \resumeItemListStart
+        \resumeItem{ANPR project}
+          {Mainly worked with NXP IMX familly of SoCs. Successfully upgraded the Linux OS on the ANPR camera using Yocto from Yocto Sumo to Yocto Scarthgap (Kernel 4.6 to 6.6). In addition, during this project, 
+          I have worked with AI accelerators, Hardware JPEG decoder/encoders for vehicle detection and calssification on the camera.}
+        \resumeItem{RFID Reader}
+          {Succefully developed a driver for Impinj-based RFID radio chip in Linux. Moreover, added a new communication protocol (OSDP) for all of our RFID readers (both Linux and RTOS based).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Scania}{Stockholm}
+      {Embedded Software/Firmware Engineer}{Feb 2019 - Aug 2023}
+      \resumeItemListStart
+        \resumeItem{CMC project}
+          {CMC (Cell Module Controller) is a project to give the testers ability to test the entire battery system in a truck/bus. 
+          The aim of the project was to simulate battery cells via simulating voltage, short circuit, open circuit and so on. 
+          I have worked with FreeRTOS on ARM Cortex-M7, and FPGA to read/wrrite from ADC and DAC.}
+        \resumeItem{Analog IN/OUT}
+          {Analog In and Analog Out are projects to read/generate analog voltage (and PWM) to simulate sensors and actuators for ECUs. Rev.1 of these projects have been developed with dsPIC33EPXXX series. 
+          Rev.2 of the project uses ATSAMV71 which is a Cortex-M7 based Micro-controller and FreeRTOS.}
+        \resumeItem{CAN Manipulation Gateway}
+          {The idea behind CAN manipulation gateway is to give the ability to testers to seize the CAN messages between ECUs and manipulate
+          them. This project uses ATSAMV71 microcontroller.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {CROUSE}{Tehran, Iran}
+      {Embedded Firmware Developer}{Oct 2016 - Feb 2019}
+      \resumeItemListStart
+        \resumeItem{Fuel Injection unit}
+          {Focused on eTPU (Enhanced Time Processing Unit) Firmware development on NXP MPC55xx. The aim was to enable the ECU to have precise measurement of
+          Crank Angle position.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------Description-----------------
+\section{Hobby Projects}
+  \resumeSubHeadingListStart
+   \resumeSubItem{FPGA and CUDA}
+   {Designed and implemented an image filtering hardware accelerator on a Xilinx Zynq MPSoC FPGA using High-Level Synthesis (HLS) and the xfOpenCV library. 
+   This included hardware design, Linux driver development, and device tree configuration, with AXI4 memory-mapped interfaces for data transfer. 
+   In parallel, I am learning CUDA programming to accelerate image processing and computer vision tasks using GPU. 
+   I work with libraries such as OpenCV for image manipulation, Thrust for parallel computing, and PyTorch to run deep learning models on CUDA-enabled hardware, 
+   aiming to boost performance in real-time vision applications.
+   }
+  \resumeSubHeadingListEnd  
+
+%--------PROGRAMMING SKILLS------------
+\section{Education}
+ \resumeSubHeadingListStart
+    \resumeSubItem{Master of Science in Digital Electronics}{Tehran Polytechnique, Iran 2012-2014}
+    \resumeSubItem{Bachelor of Science in Electronics}{Urmia University, Iran, 2007-2012}
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
